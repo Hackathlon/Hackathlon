@@ -3,25 +3,31 @@
     <template #brand>
       <b-navbar-item tag="router-link" :to="{ path: '/' }">
         <img
-          src="../assets/pickle.png"
+          src="../assets/img3.png"
           alt="Pickle"
         >
       </b-navbar-item>
     </template>
     <template #start>
-      <b-navbar-item :to="{ path: '/project' }" tag="router-link">
-        Le projet
+      <b-navbar-item :to="{ path: '/Compte' }" tag="router-link">
+        Mon Compte
       </b-navbar-item>
       <b-navbar-item :to="{ path: '/downloads' }" tag="router-link">
-        Téléchargements
+        Démarches
+      </b-navbar-item>
+      <b-navbar-item :to="{ path: '/downloads' }" tag="router-link">
+        FAQ
       </b-navbar-item>
     </template>
 
     <template #end>
+        <b-navbar-item :to="{ path: '/Contact' }" tag="router-link">
+          Nous Contacter
+        </b-navbar-item>
         <b-navbar-item :to="{ path: '/downloads' }" tag="router-link">
         <div class="buttons">
           <a class="button is-primary">
-            <strong>Essayer</strong>
+            <strong>Connection</strong>
           </a>
         </div>
       </b-navbar-item>

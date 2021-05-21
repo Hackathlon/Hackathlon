@@ -16,11 +16,12 @@
         De plus, dans la série, Rick est un véritable génie inventeur et Morty est son acolyte,
         celui qui l'accompagne dans toutes ses aventures, c'est pour cela que nous avons nommé notre
         assistant Morty.</p>
+        
       <br/>
       <br/>
       <div class="columns">
         <div class="column">
-          <TeamMember name="Matthieu" username="Szechuan-sauce"
+          <TeamMember name="Quentin" username="Szechuan-sauce"
                       role="Chef de projet, Segmentation"
                       avatar="https://img2.freepng.fr/20180320/hwq/kisspng-pocket-mortys-rick-sanchez-morty-smith-computer-ic-rick-avatar-blue-vers-icon-5ab1ccd860a082.9774853115216017523958.jpg"
                       desc="J'aime beaucoup le jus d'ananas. Ca donne un petit gout sucré."

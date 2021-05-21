@@ -8,7 +8,7 @@
 // Import Bulma's core
 @import "~bulma/sass/utilities/_all";
 // Set your colors
-$primary: #2ecc71;
+$primary: #3628f0;
 $primary-invert: findColorInvert($primary);
 $black: #111;
 $white: #F5F5F5;
