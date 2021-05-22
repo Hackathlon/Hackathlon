@@ -7,7 +7,8 @@
       <div class="column is-three-fifths is-offset-one-fifth">
 
           <div class="box">
-            <h3 class="subtitle is-3" style="margin-bottom:1rem;">Quelques informations avant de commencer</h3>
+            <h3 class="subtitle is-3" style="margin-bottom:1rem;
+">Quelques informations avant de commencer</h3>
             <b-field>
                 <b-radio v-model="radio"
                     native-value="1er">
@@ -26,14 +27,16 @@
                     Renouvellement pour perte ou vol
                 </b-radio>
             </b-field>
-          </div> 
+          </div>
 
           <div class="box" v-if="radio == 're' || radio == 'reno'">
-            <h3 class="subtitle is-3" style="margin-bottom:1rem;">Indiquez ici le cas correspondant à votre passeport</h3>
+            <h3 class="subtitle is-3" style="margin-bottom:1rem;">
+              Indiquez ici le cas correspondant à votre passeport.</h3>
             <b-field>
                 <b-radio v-model="info2"
                     native-value="1er">
-                    L'ancien titre est un titre sécurisé ou récent (valide ou périmé depuis moins de 5 ans)
+                    L'ancien titre est un titre sécurisé
+                  ou récent (valide ou périmé depuis moins de 5 ans)
                 </b-radio>
             </b-field>
             <b-field>
@@ -44,10 +47,9 @@
             </b-field>
           </div>
 
-
           <div class="box" v-if="radio == '1er' || info2 != 'no'">
             <h3 class="subtitle is-3">Informations générales</h3>
-            <p id="sous">Vérifier et remplacer les informations manquantes.</p>
+            <p class="sous">Vérifier et remplacer les informations manquantes.</p>
             <ul class="liste">
               <li class="elt"  >
                 <div class="field is-horizontal inputInfo" >
@@ -63,12 +65,12 @@
                     </div>
                 </div>
               </li>
-              
+
             </ul>
           </div>
           <div class="box">
             <h3 class="subtitle is-3">Coordonnées</h3>
-            <p id="sous"></p>
+            <p class="sous"></p>
             <ul class="liste">
               <li class="elt"><a href="#" class="elt2">Adresse mail </a> </li>
               <li class="elt"><a href="#" class="elt2">Télephone </a></li>
@@ -77,7 +79,7 @@
           </div>
           <div class="box">
             <h3 class="subtitle is-3">Mes documents</h3>
-            <p id="sous">Vos documents personnels </p>
+            <p class="sous">Vos documents personnels </p>
             <ul class="liste">
               <li class="elt"><a href="#" class="elt2">Pièces d'identité </a> </li>
               <li class="elt"><a href="#" class="elt2">Justificatif de domicile </a></li>
@@ -105,20 +107,18 @@ export default {
     Hero,
   },
   data() {
-        return {
-            radio: 'default',
-            info2: 'no',
-            user : {
-                Prenom :'Prenom',
-                Nom : 'Nom',
-                Date_de_naissance : 'xx/xx/xxxx',
-                Ville_naissance : 'ville',
-                
+    return {
+      radio: 'default',
+      info2: 'no',
+      user: {
+        Prenom: 'Prenom',
+        Nom: 'Nom',
+        Date_de_naissance: 'xx/xx/xxxx',
+        Ville_naissance: 'ville',
 
-            }
-        },
-        
-    }
+      },
+    };
+  },
 };
 
 </script>
@@ -136,7 +136,7 @@ export default {
 
   }
 
-  #sous{
+  .sous{
     margin-bottom: 1rem;
     font-size: 0.8rem;
   }
@@ -158,7 +158,6 @@ export default {
         padding-right:25%;
         padding-left:5%;
     }
-
 
     .case{
         margin-left: 2rem;
