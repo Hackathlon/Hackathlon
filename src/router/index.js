@@ -11,7 +11,7 @@ const routes = [
     component: Home,
   },
   {
-    path: '/Contact',
+    path: '/contact',
     name: 'Contact',
     // route level code-splitting
     // this generates a separate chunk (Contact.[hash].js) for this route
@@ -19,7 +19,7 @@ const routes = [
     component: () => import(/* webpackChunkName: "Contact" */ '../views/Contact.vue'),
   },
   {
-    path: '/Compte',
+    path: '/compte',
     name: 'Compte',
     // route level code-splitting
     // this generates a separate chunk (Contact.[hash].js) for this route
@@ -27,7 +27,7 @@ const routes = [
     component: () => import(/* webpackChunkName: "Contact" */ '../views/Compte.vue'),
   },
   {
-    path: '/Demarche',
+    path: '/demarche',
     name: 'Demarche',
     // route level code-splitting
     // this generates a separate chunk (Contact.[hash].js) for this route
@@ -35,7 +35,7 @@ const routes = [
     component: () => import(/* webpackChunkName: "Contact" */ '../views/Demarche.vue'),
   },
   {
-    path: '/FAQ',
+    path: '/faq',
     name: 'FAQ',
     // route level code-splitting
     // this generates a separate chunk (Contact.[hash].js) for this route
@@ -51,6 +51,11 @@ const routes = [
     path: '/enregistrer',
     name: 'enregistrer',
     component: () => import(/* webpackChunkName: "downloads" */ '../views/enregistrer.vue'),
+  },
+  {
+    path: '/demarche/passeport',
+    name: 'FormPassport',
+    component: () => import(/* webpackChunkName: "downloads" */ '../views/FormPassport.vue'),
   },
 ];
 

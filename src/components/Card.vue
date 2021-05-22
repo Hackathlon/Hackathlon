@@ -18,7 +18,7 @@
                                 <div class="card__side card__side--back">
                                     <div class="card__details u-center-text">
                                         {{s1}}
-                                         <a href="http://pnrsolution.org/Datacenter/Vol4/Issue1/58.pdf" class="btn-text">Learn more &rarr;</a>
+                                         <a :href="l1" class="btn-text">Learn more &rarr;</a>
                                     </div>
                                 </div>
                             </div>
@@ -37,7 +37,7 @@
                                 <div class="card__side card__side--back">
                                     <div class="card__details u-center-text">
                                             {{s2}}
-                                         <a href="https://fr.wikipedia.org/wiki/Advanced_Encryption_Standard" class="btn-text">Learn more &rarr;</a>
+                                         <a :href=l2 class="btn-text">Learn more &rarr;</a>
                                     </div>
                                 </div>
                             </div>
@@ -56,7 +56,7 @@
                                 <div class="card__side card__side--back">
                                     <div class="card__details u-center-text">
                                              {{s3}}
-                                         <a href="https://ops.tips/blog/a-tcp-server-in-c/" class="btn-text">Learn more &rarr;</a>
+                                         <a :href=l3 class="btn-text">Learn more &rarr;</a>
                                     </div>
                                 </div>
                             </div>
@@ -74,7 +74,7 @@
                                 <div class="card__side card__side--back">
                                     <div class="card__details u-center-text">
                                          {{s4}}
-                                         <a href="https://www.gtk.org/" class="btn-text">Learn more &rarr;</a>
+                                         <a :href=l4 class="btn-text">Learn more &rarr;</a>
                                     </div>
                                 </div>
                             </div>
@@ -88,7 +88,7 @@
 
 export default {
   name: 'Demarche',
-  props: ['t1', 's1', 't2', 's2', 't3', 's3', 't4', 's4', 'titre', 'i1', 'i2', 'i3', 'i4'],
+  props: ['t1', 's1', 't2', 's2', 't3', 's3', 't4', 's4', 'titre', 'i1', 'i2', 'i3', 'i4','l1','l2','l3','l4'],
 };
 
 </script>

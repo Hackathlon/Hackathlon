@@ -5,7 +5,8 @@
     <Card titre="Aides : "
           t1="Bourse"
           t2="APL" s1="Remplir ma demande de bourse"
-          i1="bourse.jpg" i2="maison.jpg"  />
+          i1="bourse.jpg" i2="maison.jpg"  
+          l1 = "demarche/passeport"/>
     <Card titre="Véhicule : "
           t1="Carte Grise" t2="Permis" t3="Assurances" t4="certification imatriculation"
           s1="Remplir ma demande de bourse"

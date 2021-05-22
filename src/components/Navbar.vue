@@ -9,19 +9,19 @@
       </b-navbar-item>
     </template>
     <template #start>
-      <b-navbar-item :to="{ path: '/Compte' }" tag="router-link">
+      <b-navbar-item :to="{ path: '/compte' }" tag="router-link">
         Mon Compte
       </b-navbar-item>
-      <b-navbar-item :to="{ path: '/Demarche' }" tag="router-link">
+      <b-navbar-item :to="{ path: '/demarche' }" tag="router-link">
         Démarches
       </b-navbar-item>
-      <b-navbar-item :to="{ path: '/FAQ' }" tag="router-link">
+      <b-navbar-item :to="{ path: '/faq' }" tag="router-link">
         FAQ
       </b-navbar-item>
     </template>
 
     <template #end>
-        <b-navbar-item :to="{ path: '/Contact' }" tag="router-link">
+        <b-navbar-item :to="{ path: '/contact' }" tag="router-link">
           Nous Contacter
         </b-navbar-item>
         <b-navbar-item :to="{ path: '/connexion' }" tag="router-link">
