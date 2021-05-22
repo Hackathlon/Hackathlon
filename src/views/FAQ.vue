@@ -84,10 +84,8 @@
         :open="isOpen == index"
         @open="isOpen = index">
         <template #trigger="props">
-            <div
-                class="card-header"
-                role="button"
-            >
+            <div class="card-header"
+                role="button">
                 <p class="card-header-title">             
                     {{ collapse.title }}
                 </p>
@@ -134,14 +132,14 @@ export default {
           isOpen: -1,
           collapses: [
           {
-              title: 'Comment faire sa déclaration d’impôts ?',
+              title: 'Résiliation d’un contrat d’assurance pour un particulier',
               text: ['Notifier son assureur en respectant un préavis d’au moins 2 mois avant l’échéance du contrat (par mail, courrier, déclaration au siège social  ou tout autre moyen prévu par le contrat …) -> confirmation par écrit de la part de l’assureur ',
               'En cas de reconduction tacite d’un contrat, l’assureur doit rappeler avec l’avis d’échéance annuelle la date limite à laquelle l’assuré peut mettre fin à son contrat d’assurance. Il doit également rappeler que l\'assuré dispose d’un délai de vingt jours à compter de la date d’envoi de l\'avis d\'échéance pour demander la non-reconduction du contrat.Lorsque l’information ne lui a pas été donnée, l’assuré peut résilier le contrat, sans pénalités, à tout moment à compter de la date de reconduction du contrat, par lettre, email, ou selon l\'une des autres modalités prévues à l\'article L. 113-14 du Code des assurances.',
               'Les contrats d\'assurance automobile, multirisques habitation et complémentaires santé peuvent être réinitialisés à tout moment lorsque le contrat a plus d’un an.  La résiliation prend alors fin un mois après la réception de la demande par l’assureur. Cependant, dans les cas des assurances automobiles et habitations (qui sont obligatoires), la résiliation d\'un contrat d’assurance est effectuée par le nouvel assureur.',
               'La résiliation d’un contrat d’assurance peut prendre fin lorsque surviennent certains éléments, tels qu’un déménagement, un mariage, une vente, un achat, un héritage, sinistre …'],
           },
           {
-              title: 'Résiliation d’un contrat d’assurance pour un particulier ',
+              title: ' Comment faire sa déclaration d’impôts ?',
              text: ['Toute personne majeure ayant touché un revenu doit faire une déclaration d’impôts sous peine d’amende. Cependant, il est conseillé de quand même remplir une déclaration d’impôts même si vous n’avez pas touché de revenu car vous serez alors éligible à des aides sociales.',
              'Depuis 2020, possibilité de faire sa déclaration en ligne. Si une déclaration papier a été faite en 2019 ou si une déclaration en ligne a été remplie en 2020 vous êtes alors éligible à la déclaration automatique d’impôts. Vous devrez vérifier que toutes les informations remplies sur votre déclaration d’impôts en ligne sont correctes et si c’est le cas vous n’avez plus qu’à valider. Sinon, vous devrez la re-remplir et la signer.',
              'Aujourd’hui, la déclaration papier est amenée à disparaître et ne peut se faire que dans les cas suivants :\n vous remplissez votre déclaration d’impôt pour la première fois \n vous vivez dans une zone sans couverture réseau ou vous n’êtes pas équipé d’une connexion internet \nvous êtes une personne âgée, handicapée ou dépendante.'],
