@@ -1,7 +1,5 @@
-
-
 <template>
-    
+
     <section class="cards-container">
                     <div class="t" style="margin-top:4rem; margin-bottom:2rem;margin-left: 5%;">
                         <h2 class="title is-1">{{titre}}</h2>
@@ -11,7 +9,6 @@
                             <div class="card">
                                 <div class="card__side card__side--front">
                                     <div class="card__picture card__picture--1 image is-3by4 ">
-                                        
                                         <img :src="require(`../assets/Img_Demarche/${i1}`)" alt = i1 />
                                     </div>
                                     <h4 class="card__heading">
@@ -30,7 +27,8 @@
                             <div class="card">
                                 <div class="card__side card__side--front">
                                     <div class="card__picture card__picture--2 image is-3by4">
-                                        <img :src="require(`../assets/Img_Demarche/${i2}`)" alt = i2 />
+                                        <img :src="require(`../assets/Img_Demarche/${i2}`)" 
+                                              alt = i2 />
                                     </div>
                                     <h4 class="card__heading">
                                         <span class="card__heading-span">{{t2}}</span>
@@ -48,7 +46,8 @@
                             <div class="card">
                                 <div class="card__side card__side--front">
                                     <div class="card__picture card__picture--3 image is-3by4">
-                                        <img :src="require(`../assets/Img_Demarche/${i3}`)" alt = i3 />
+                                        <img :src="require(`../assets/Img_Demarche/${i3}`)"
+                                              alt = i3 />
                                     </div>
                                     <h4 class="card__heading">
                                         <span class="card__heading-span">{{t3}}</span>
@@ -83,17 +82,13 @@
                     </div>
             </section>
 
-  
 </template>
-
 
 <script>
 
-
-
 export default {
   name: 'Demarche',
-  props: ['t1', 's1', 't2', 's2', 't3', 's3', 't4', 's4','titre','i1', 'i2', 'i3', 'i4'],
+  props: ['t1', 's1', 't2', 's2', 't3', 's3', 't4', 's4', 'titre', 'i1', 'i2', 'i3', 'i4'],
 };
 
 </script>
@@ -198,11 +193,10 @@ $gutter-vertical: 5%;
         }
     }
 
-
     &:hover &__side--front { // equivalent to .card:hover .card__side--front
         transform: rotateY(180deg);
     }
-    
+
     &:hover &__side--back { // equivalent to .card:hover .card__side--front
         transform: rotateY(0deg);
     }
@@ -210,9 +204,8 @@ $gutter-vertical: 5%;
     &__picture{
         background-size: cover;
         height: 23rem;
-        
+
         //background-blend-mode: color-dodge;
-        
 
     }
 
@@ -233,7 +226,7 @@ $gutter-vertical: 5%;
         //box-decoration-break: clone; // not necessary but sexy
         background-image: linear-gradient(to right bottom, $color-primary, $color-secondary);
         font-size: 2rem;
-        
+
     }
 
     &__details{
@@ -245,16 +238,8 @@ $gutter-vertical: 5%;
         margin: 0 10%;
         top: 8rem;
         text-align: center;
-        
+
     }
 }
-
-
-
-
-
-
-
-
 
 </style>

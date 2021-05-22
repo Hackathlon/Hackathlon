@@ -9,7 +9,7 @@
 
                 <p class="subtitle is-4 has-margin-top-20 is-family-primary">inscrivez vous gratuitement dès maintenant.</p>
 
-                <form method="get" action="https://app.pentos.co/signup">
+                <form method="get" action=".....">
                     <div class="field has-addons has-margin-top-30">
                         <div class="control">
                             <input class="input is-medium" type="email" name="email" placeholder="Your email">
@@ -77,9 +77,7 @@ import Team from '../components/Team.vue';
 export default {
   name: 'Home',
   components: {
-    Team,
     Footer,
-    Hero,
     Navbar,
   },
 };

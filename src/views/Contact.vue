@@ -1,4 +1,3 @@
-
 <template>
   <section>
     <Navbar/>
@@ -6,15 +5,12 @@
 
     <div class="d" style="margin-top: 3rem;display:block;text-align:center;">
       <h1>Vous pouvez nous contacter à l'adresse suivante :</h1>
-      
+
     </div>
-
-
 
     <Footer/>
   </section>
 </template>
-
 
 <script>
 // @ is an alias to /src
@@ -34,9 +30,5 @@ export default {
 </script>
 
 <style scoped lang="scss">
-
-
-
-
 
 </style>
