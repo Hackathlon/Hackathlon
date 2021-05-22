@@ -13,7 +13,8 @@
                   </div>
                   <div class="field">
                       <div class="control">
-                          <input class="input is-large" type="name" placeholder="Prenom" autofocus="">
+                          <input class="input is-large" type="name"
+                                 placeholder="Prenom" autofocus="">
                       </div>
                   </div>
                   <div data-content="ET" class="is-divider">
@@ -21,7 +22,8 @@
                   </div>
                   <div class="field" >
                       <div class="control">
-                          <input class="input is-large" type="email" placeholder="Email" autofocus="">
+                          <input class="input is-large"
+                                 type="email" placeholder="Email" autofocus="">
                       </div>
                   </div>
 
@@ -31,7 +33,8 @@
                       </div>
                   </div>
 
-                  <button class="button is-block is-info is-large is-fullwidth enregistrer">S'enregsiter</button>
+                  <button class="button is-block is-info is-large is-fullwidth enregistrer">
+                    S'enregsiter</button>
               </form>
           </div>
       </div>
@@ -42,12 +45,10 @@
 <script>
 // @ is an alias to /src
 import Navbar from '../components/Navbar.vue';
-import Footer from '../components/Footer.vue';
 
 export default {
   name: 'enregistrer',
   components: {
-    Footer,
     Navbar,
   },
 };

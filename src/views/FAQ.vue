@@ -1,79 +1,81 @@
 <template>
   <section>
     <Navbar/>
-    <Hero msg = "FAQ" sub_msg = "Quoi ? Où ? Comment ? Que faire ? Pourquoi ?"/>
-    <center> 
-    <div class="box " >
-      <p class="title ">Recherche sur notre site !</p>
-      <form method="get" action=".....">
-        <div class="field has-addons has-addons-centered column is-6">
+    <Hero msg="FAQ" sub_msg="Quoi ? Où ? Comment ? Que faire ? Pourquoi ?"/>
+    <center>
+      <div class="box ">
+        <p class="title ">Recherche sur notre site !</p>
+        <form method="get" action=".....">
+          <div class="field has-addons has-addons-centered column is-6">
             <div class="control is-expanded ">
-                <input class="input is-medium"  name="recherche" placeholder="Taper les mots clés de votre question">
+              <input class="input is-medium"
+                     name="recherche" placeholder="Taper les mots clés de votre question">
             </div>
             <div class="control">
-                <button type="submit" class="button is-primary is-medium">
-                        Rechercher
-                </button>
+              <button type="submit" class="button is-primary is-medium">
+                Rechercher
+              </button>
             </div>
-        </div>
-      </form>
-    </div>
-    <div class="box is-6" >
+          </div>
+        </form>
+      </div>
+      <div class="box is-6">
 
-    <div class="panel-tabs">
-      <div class="navbar-item has-dropdown is-hoverable">
-        <a class="navbar-link">
-          Mes aides  
-        </a>
-        <div class="navbar-dropdown">
-          <a class="navbar-item">
-            Demande de bourse
-          </a>
-          <a class="navbar-item">
-            Les APL
-          </a>
+        <div class="panel-tabs">
+          <div class="navbar-item has-dropdown is-hoverable">
+            <a class="navbar-link">
+              Mes aides
+            </a>
+            <div class="navbar-dropdown">
+              <a class="navbar-item">
+                Demande de bourse
+              </a>
+              <a class="navbar-item">
+                Les APL
+              </a>
+            </div>
+          </div>
+          <div class="navbar-item has-dropdown is-hoverable">
+            <a class="navbar-link">
+              Demande de documents
+            </a>
+            <div class="navbar-dropdown">
+              <a class="navbar-item">
+                Permis
+              </a>
+              <a class="navbar-item">
+                Assurances
+              </a>
+              <a class="navbar-item">
+                Certification imatriculation
+              </a>
+              <hr class="navbar-divider">
+              <a class="navbar-item">
+                Passeport
+              </a>
+              <a class="navbar-item">
+                Carte identité
+              </a>
+            </div>
+          </div>
+          <div class="navbar-item has-dropdown is-hoverable">
+            <a class="navbar-link">
+              Déclarations
+            </a>
+            <div class="navbar-dropdown">
+              <a class="navbar-item">
+                Impôts
+              </a>
+              <a class="navbar-item">
+                Déclaration de revenus
+              </a>
+              <a class="navbar-item">
+                Contact
+              </a>
+            </div>
+          </div>
         </div>
-      </div>
-      <div class="navbar-item has-dropdown is-hoverable">
-        <a class="navbar-link">
-          Demande de document 
-        </a>
-        <div class="navbar-dropdown">
-          <a class="navbar-item">
-            Permis
-          </a> 
-          <a class="navbar-item">
-            Assurances
-          </a>
-          <a class="navbar-item">
-            Certification imatriculation
-          </a>
-          <hr class="navbar-divider">
-          <a class="navbar-item">
-            Passeport
-          </a>
-          <a class="navbar-item">
-            Carte identité
-          </a>
-        </div>
-      </div>
-      <div class="navbar-item has-dropdown is-hoverable">
-        <a class="navbar-link">
-          Déclaration 
-        </a>
-        <div class="navbar-dropdown">
-          <a class="navbar-item">
-            Impôt
-          </a>
-          <a class="navbar-item">
-            Déclaration de revenue
-          </a>
-          <a class="navbar-item">
-            Contact
-          </a>
-        </div>
-      </div>
-    </div>
+
 
     <div class = "column is-four-fifths">
       <b-collapse
@@ -88,25 +90,26 @@
                 role="button">
                 <p class="card-header-title">             
                     {{ collapse.title }}
+
                 </p>
                 <a class="card-header-icon">
-                    <b-icon
-                        :icon="props.open ? 'menu-down' : 'menu-up'">
-                    </b-icon>
+                  <b-icon
+                    :icon="props.open ? 'menu-down' : 'menu-up'">
+                  </b-icon>
                 </a>
+              </div>
+            </template>
+            <div class="card-content">
+              <div class="content" style="text-align:left;">
+                <li v-for="desc in collapse.text" :key="desc">
+                  {{ desc }}
+                </li>
+              </div>
             </div>
-        </template>
-        <div class="card-content">
-            <div class="content" style="text-align:left;">
-              <li v-for="desc in collapse.text" :key="desc">    
-                {{ desc }}
-              </li>
-            </div>
+          </b-collapse>
         </div>
-    </b-collapse>
-    </div >
 
-    </div>  
+      </div>
     </center>
     <Footer/>
   </section>
@@ -118,8 +121,6 @@ import Hero from '../components/Hero.vue';
 import Navbar from '../components/Navbar.vue';
 import Footer from '../components/Footer.vue';
 
-
-
 export default {
   name: 'FAQ',
   components: {
@@ -128,6 +129,7 @@ export default {
     Navbar,
   },
   data() {
+
       return {
           isOpen: -1,
           collapses: [
@@ -171,12 +173,8 @@ export default {
   },
 };
 
-  
-
 </script>
 
 <style scoped lang="scss">
-
-
 
 </style>

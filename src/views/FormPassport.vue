@@ -1,3 +1,5 @@
+
+
 <template>
     <section >
     <Navbar/>
@@ -207,3 +209,5 @@ export default {
         margin-left: 2rem;
     }
 </style>
+
+

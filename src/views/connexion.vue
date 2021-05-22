@@ -12,27 +12,32 @@
                         <form>
                             <div class="field">
                                 <div class="control">
-                                    <input class="input is-large" type="email" placeholder="Email" autofocus="">
+                                    <input class="input is-large" type="email"
+                                           placeholder="Email" autofocus="">
                                 </div>
                             </div>
 
                             <div class="field">
                                 <div class="control">
-                                    <input class="input is-large" type="password" placeholder="mot de passe">
+                                    <input class="input is-large"
+                                           type="password" placeholder="mot de passe">
                                 </div>
                             </div>
                             <div class="field">
                                 <label class="checkbox">
                                 <input type="checkbox">
-                                se souvenir de moi
+                                Se souvenir de moi
                                 </label>
                             </div>
-                            <button class="button is-block is-info is-large is-fullwidth">Se connecter </button>
+                            <button class="button is-block is-info is-large is-fullwidth">
+                              Se connecter </button>
                         </form>
                     </div>
 
                         <p class="has-text-grey">
-                        <b-navbar-item :to="{ path: '/enregistrer' }" tag="router-link">s'enregistrer</b-navbar-item > &nbsp;·&nbsp;
+                        <b-navbar-item :to="{ path: '/enregistrer' }"
+                                       tag="router-link">
+                          S'enregistrer</b-navbar-item > &nbsp;·&nbsp;
                         </p>
 
                 </div>
@@ -44,12 +49,10 @@
 <script>
 // @ is an alias to /src
 import Navbar from '../components/Navbar.vue';
-import Footer from '../components/Footer.vue';
 
 export default {
   name: 'connexion',
   components: {
-    Footer,
     Navbar,
   },
 };
