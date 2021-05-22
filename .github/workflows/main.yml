@@ -21,8 +21,8 @@ jobs:
       - name: Deploy
         uses: JamesIves/github-pages-deploy-action@releases/v3
         with:
-          REPOSITORY_NAME: Pickle-Burp/Pickle-Burp.github.io
+          REPOSITORY_NAME: Hackathlon/hackathlon.github.io
           ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
-          BRANCH: master
+          BRANCH: main
           FOLDER: dist
           CLEAN: true
