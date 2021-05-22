@@ -6,7 +6,7 @@
           t1="Bourse"
           t2="APL" s1="Remplir ma demande de bourse"
           i1="bourse.jpg" i2="maison.jpg"  
-          l1 = "demarche/passeport"/>
+          l1 = ""/>
     <Card titre="Véhicule : "
           t1="Carte Grise" t2="Permis" t3="Assurances" t4="certification imatriculation"
           s1="Remplir ma demande de bourse"
@@ -14,7 +14,8 @@
     <Card titre="Identité : "
           t1="Carte d'identité" t2="Passeport"
           s1="Remplir ma demande de bourse"
-          i1="identite.jpg" i2="passport.jpg"  />
+          i1="identite.jpg" i2="passport.jpg" 
+          l2 = "demarche/passeport" />
     <Card titre="Imposition : "
           t1="Déclaration d'impôt"
           s1="Remplir ma demande de bourse"
@@ -43,5 +44,7 @@ export default {
 </script>
 
 <style scoped lang="scss">
+
+
 
 </style>
