@@ -1,17 +1,16 @@
+
+
 <template>
     <section >
     <Navbar/>
     <Hero msg = "Demande de passeport" sub_msg = ""/>
     <div class="columns is-mobile" style="margin-top: 1rem;">
-
       <div class="column is-three-fifths is-offset-one-fifth">
-
           <div class="box">
-            <h3 class="subtitle is-3" style="margin-bottom:1rem;
-">Quelques informations avant de commencer</h3>
+            <h3 class="subtitle is-3" style="margin-bottom:1rem;">Quelques informations avant de commencer</h3>
             <b-field>
                 <b-radio v-model="radio"
-                    native-value="1er">
+                    native-value="1er" >
                     1ère demande
                 </b-radio>
             </b-field>
@@ -27,16 +26,14 @@
                     Renouvellement pour perte ou vol
                 </b-radio>
             </b-field>
-          </div>
+          </div> 
 
           <div class="box" v-if="radio == 're' || radio == 'reno'">
-            <h3 class="subtitle is-3" style="margin-bottom:1rem;">
-              Indiquez ici le cas correspondant à votre passeport.</h3>
+            <h3 class="subtitle is-3" style="margin-bottom:1rem;">Indiquez ici le cas correspondant à votre passeport</h3>
             <b-field>
                 <b-radio v-model="info2"
                     native-value="1er">
-                    L'ancien titre est un titre sécurisé
-                  ou récent (valide ou périmé depuis moins de 5 ans)
+                    L'ancien titre est un titre sécurisé ou récent (valide ou périmé depuis moins de 5 ans)
                 </b-radio>
             </b-field>
             <b-field>
@@ -47,45 +44,76 @@
             </b-field>
           </div>
 
+
           <div class="box" v-if="radio == '1er' || info2 != 'no'">
             <h3 class="subtitle is-3">Informations générales</h3>
-            <p class="sous">Vérifier et remplacer les informations manquantes.</p>
+            <p id="sous">Vérifier et remplacer les informations manquantes.</p>
             <ul class="liste">
+              <div v-for="(value,name) in user" v-bind:key="name"  >  
               <li class="elt"  >
                 <div class="field is-horizontal inputInfo" >
                     <div class="field-label is-normal">
-                        <label class="label">Prenom</label>
+                        <label class="label">{{name}}</label>
                     </div>
                     <div class="field field-body">
                         <div class="field">
                         <p class="control">
-                            <input class="input"  placeholder="Prenom">
+                            <input class="input"  :placeholder=value >
                         </p>
                         </div>
                     </div>
                 </div>
               </li>
-
+             </div> 
             </ul>
           </div>
-          <div class="box">
-            <h3 class="subtitle is-3">Coordonnées</h3>
-            <p class="sous"></p>
-            <ul class="liste">
-              <li class="elt"><a href="#" class="elt2">Adresse mail </a> </li>
-              <li class="elt"><a href="#" class="elt2">Télephone </a></li>
-              <li class="elt"><a href="#" class="elt2">Adresse </a></li>
-            </ul>
-          </div>
-          <div class="box">
+          <div class="box" v-if="radio == '1er' || info2 != 'no'">
             <h3 class="subtitle is-3">Mes documents</h3>
-            <p class="sous">Vos documents personnels </p>
+            <p id="sous">Vos documents personnels </p>
             <ul class="liste">
-              <li class="elt"><a href="#" class="elt2">Pièces d'identité </a> </li>
-              <li class="elt"><a href="#" class="elt2">Justificatif de domicile </a></li>
-              <li class="elt"><a href="#" class="elt2">Coordonné banquaire </a></li>
+              <div v-for="(value,name) in docs" v-bind:key="name"  >  
+              <li class="elt"  >       
+                <div class="field is-horizontal inputInfo2" >
+                    <div class="field-label is-normal">
+                        <label class="label">{{name}}</label>
+                    </div>
+                    <div class="field has-addons has-addons-centered">   
+                    <div class="field field-body">
+                        <div class="field">
+                        <p class="control">
+                            <input class="input"  :placeholder=value >
+                        </p>
+                        </div>
+                    </div>
+                    <b-field class="file is-primary" :class="{'has-name': !!value}">
+                        <b-upload :v-model=value class="file-label">
+                            <span class="file-cta">
+                                <b-icon class="file-icon" icon="upload"></b-icon>
+                                <span class="file-label">Télécharger</span>
+                            </span>   
+                        </b-upload>
+                    </b-field>
+                    </div> 
+                </div>
+              </li>
+             </div>  
             </ul>
           </div>
+          <div class="box" v-if="radio == '1er' || info2 != 'no'">
+            <h3 class="subtitle is-3">Achat automatique</h3>
+            <p id="sous">souhaitez-vous que l'on s'en occupe a votre place ? .</p>
+            <ul class="liste">
+              <div v-for="(value,name) in achat" v-bind:key="name"  >  
+              <li class="elt " >
+                    <label class="checkbox">
+                        <input type="checkbox">
+                        {{name}} 
+                    </label>
+              </li>
+             </div> 
+            </ul>
+          </div>
+        <button class="button is-block is-info is-large is-fullwidth" v-if="radio == '1er' || info2 != 'no'" >M'envoyer la synthèse </button>
 
       </div>
     </div>
@@ -107,18 +135,31 @@ export default {
     Hero,
   },
   data() {
-    return {
-      radio: 'default',
-      info2: 'no',
-      user: {
-        Prenom: 'Prenom',
-        Nom: 'Nom',
-        Date_de_naissance: 'xx/xx/xxxx',
-        Ville_naissance: 'ville',
-
-      },
-    };
-  },
+        return {
+            radio: 'default',
+            info2: 'no',
+            user : {
+                "Prénom" :'Prenom',
+                "Nom" : 'Nom',
+                "Date de naissance" : 'xx/xx/xxxx',
+                "Ville de naissance" : 'ville',
+                "Adresse mail" : '@',
+                "Téléphone" : '06xxxxxxx',
+                "Code postal" : 'code postal',
+                "Adresse" : 'adresse',
+                "Vile" : 'ville',
+            },
+            docs : {
+                "Carte Identité" : 'ma carte.png',
+                "Justificatif de domicile" : 'justificatif',
+                "Photo d'identite" : 'ma photo :) ',
+            },
+            achat: {
+                "Timbre fiscaux" : 'timbre',
+            }
+        }
+        
+    }
 };
 
 </script>
@@ -136,7 +177,7 @@ export default {
 
   }
 
-  .sous{
+  #sous{
     margin-bottom: 1rem;
     font-size: 0.8rem;
   }
@@ -158,8 +199,15 @@ export default {
         padding-right:25%;
         padding-left:5%;
     }
+.inputInfo2{
+
+        padding-right:30%;
+        padding-left:5%;
+    }
 
     .case{
         margin-left: 2rem;
     }
 </style>
+
+
