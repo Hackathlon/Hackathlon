@@ -12,10 +12,10 @@
       <b-navbar-item :to="{ path: '/Compte' }" tag="router-link">
         Mon Compte
       </b-navbar-item>
-      <b-navbar-item :to="{ path: '/downloads' }" tag="router-link">
+      <b-navbar-item :to="{ path: '/Demarche' }" tag="router-link">
         Démarches
       </b-navbar-item>
-      <b-navbar-item :to="{ path: '/downloads' }" tag="router-link">
+      <b-navbar-item :to="{ path: '/FAQ' }" tag="router-link">
         FAQ
       </b-navbar-item>
     </template>
@@ -27,7 +27,7 @@
         <b-navbar-item :to="{ path: '/downloads' }" tag="router-link">
         <div class="buttons">
           <a class="button is-primary">
-            <strong>Connection</strong>
+            <strong>Connexion</strong>
           </a>
         </div>
       </b-navbar-item>

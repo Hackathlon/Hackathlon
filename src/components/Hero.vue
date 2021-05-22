@@ -19,7 +19,7 @@ export default {
   name: 'Hero',
   props: {
     msg: String,
-    sub_msg : String,
+    sub_msg: String,
   },
 };
 </script>
@@ -30,7 +30,5 @@ export default {
   font-family: 'Courier New', Courier, monospace;
   font-size: 3rem;
 }
-
-
 
 </style>

@@ -16,7 +16,7 @@
         De plus, dans la série, Rick est un véritable génie inventeur et Morty est son acolyte,
         celui qui l'accompagne dans toutes ses aventures, c'est pour cela que nous avons nommé notre
         assistant Morty.</p>
-        
+
       <br/>
       <br/>
       <div class="columns">
