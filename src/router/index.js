@@ -43,9 +43,14 @@ const routes = [
     component: () => import(/* webpackChunkName: "Contact" */ '../views/FAQ.vue'),
   },
   {
-    path: '/downloads',
-    name: 'Téléchargements',
-    component: () => import(/* webpackChunkName: "downloads" */ '../views/Downloads.vue'),
+    path: '/connexion',
+    name: 'connexion',
+    component: () => import(/* webpackChunkName: "downloads" */ '../views/connexion.vue'),
+  },
+  {
+    path: '/enregistrer',
+    name: 'enregistrer',
+    component: () => import(/* webpackChunkName: "downloads" */ '../views/enregistrer.vue'),
   },
 ];
 

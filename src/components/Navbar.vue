@@ -24,7 +24,7 @@
         <b-navbar-item :to="{ path: '/Contact' }" tag="router-link">
           Nous Contacter
         </b-navbar-item>
-        <b-navbar-item :to="{ path: '/downloads' }" tag="router-link">
+        <b-navbar-item :to="{ path: '/connexion' }" tag="router-link">
         <div class="buttons">
           <a class="button is-primary">
             <strong>Connexion</strong>
