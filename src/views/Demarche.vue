@@ -7,9 +7,10 @@
           t2="APL" s1="Remplir ma demande de bourse"
           i1="bourse.jpg" i2="maison.jpg"  />
     <Card titre="Véhicule : "
-          t1="Carte Grise" t2="Permis" t3="Assurances" t4="certification imatriculation"
-          s1="Remplir ma demande de bourse"
-          i1="carte-grise.jpg" i2="permis.jpg" i3="assurance.jpeg"  i4="certif.jpg" />
+          t1="Cession" t2="Permis" t3="Assurances" t4="certification imatriculation"
+          s1="Acheter ou vendre un véhicule"
+          h1="/demarche/cession"
+          i1="vente.jpeg" i2="permis.jpg" i3="assurance.jpeg"  i4="certif.jpg" />
     <Card titre="Identité : "
           t1="Carte d'identité" t2="Passeport"
           s1="Remplir ma demande de bourse"

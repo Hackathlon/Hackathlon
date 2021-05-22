@@ -27,7 +27,7 @@ const routes = [
     component: () => import(/* webpackChunkName: "Contact" */ '../views/Compte.vue'),
   },
   {
-    path: '/Demarche',
+    path: '/demarche',
     name: 'Demarche',
     // route level code-splitting
     // this generates a separate chunk (Contact.[hash].js) for this route
@@ -43,9 +43,9 @@ const routes = [
     component: () => import(/* webpackChunkName: "Contact" */ '../views/FAQ.vue'),
   },
   {
-    path: '/downloads',
-    name: 'Téléchargements',
-    component: () => import(/* webpackChunkName: "downloads" */ '../views/Downloads.vue'),
+    path: '/demarche/cession',
+    name: 'Cession de véhicule',
+    component: () => import(/* webpackChunkName: "downloads" */ '../views/Cession.vue'),
   },
 ];
 

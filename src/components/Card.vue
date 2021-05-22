@@ -18,7 +18,7 @@
                                 <div class="card__side card__side--back">
                                     <div class="card__details u-center-text">
                                         {{s1}}
-                                         <a href="http://pnrsolution.org/Datacenter/Vol4/Issue1/58.pdf" class="btn-text">Learn more &rarr;</a>
+                                         <a :href="h1" class="btn-text">Learn more &rarr;</a>
                                     </div>
                                 </div>
                             </div>
@@ -27,7 +27,7 @@
                             <div class="card">
                                 <div class="card__side card__side--front">
                                     <div class="card__picture card__picture--2 image is-3by4">
-                                        <img :src="require(`../assets/Img_Demarche/${i2}`)" 
+                                        <img :src="require(`../assets/Img_Demarche/${i2}`)"
                                               alt = i2 />
                                     </div>
                                     <h4 class="card__heading">
@@ -56,7 +56,7 @@
                                 <div class="card__side card__side--back">
                                     <div class="card__details u-center-text">
                                              {{s3}}
-                                         <a href="https://ops.tips/blog/a-tcp-server-in-c/" class="btn-text">Learn more &rarr;</a>
+                                         <a href="https://ops.tips/blog/a-tcp-server-in-c/" class="btn-text">En savoir plus&rarr;</a>
                                     </div>
                                 </div>
                             </div>
@@ -88,7 +88,7 @@
 
 export default {
   name: 'Demarche',
-  props: ['t1', 's1', 't2', 's2', 't3', 's3', 't4', 's4', 'titre', 'i1', 'i2', 'i3', 'i4'],
+  props: ['t1', 's1', 'h1', 't2', 's2', 't3', 's3', 't4', 's4', 'titre', 'i1', 'i2', 'i3', 'i4'],
 };
 
 </script>
