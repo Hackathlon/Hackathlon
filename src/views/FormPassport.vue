@@ -191,7 +191,17 @@ export default {
         name: this.userForm.Nom + this.userForm.prenom,
         email: this.email,
         message: JSON.stringify(this.userForm),
-      }, 'user_57NgCEyKEiU6SjKIf0YVF');
+      }, 'user_57NgCEyKEiU6SjKIf0YVF')
+        .then(() => this.$buefy.dialog.alert({
+          title: 'OK',
+          message: 'Sent !',
+          type: 'is-info',
+          hasIcon: true,
+          icon: 'times-circle',
+          iconPack: 'fa',
+          ariaRole: 'alertdialog',
+          ariaModal: true,
+        }));
     },
   },
 };
