@@ -77,7 +77,7 @@ export default {
     login() {
       console.log('Chien');
       // Fetches posts when the component is created.
-      axios.post('http://vps.vinetos.fr:9090/login',
+      axios.post('http://localhost:9090/login',
         {
           email: this.email,
           passwd: this.passw,
@@ -88,8 +88,8 @@ export default {
           this.err = true;
           this.$buefy.dialog.alert({
             title: 'OK',
-            message: 'Something\'s not good but I have a custom <b>icon</b> and <b>type</b>',
-            type: 'is-danger',
+            message: 'Valid login',
+            type: 'is-info',
             hasIcon: true,
             icon: 'times-circle',
             iconPack: 'fa',
@@ -99,9 +99,10 @@ export default {
         })
         .catch((e) => {
           this.err = true;
+          console.log("grrr");
           this.$buefy.dialog.alert({
             title: 'Error',
-            message: 'Something\'s not good but I have a custom <b>icon</b> and <b>type</b>',
+            message: 'Error email or password',
             type: 'is-danger',
             hasIcon: true,
             icon: 'times-circle',
